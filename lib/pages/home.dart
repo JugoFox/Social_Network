@@ -1,4 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:easy_localization/easy_localization.dart';
+import 'package:flutter_localizations/flutter_localizations.dart';
+import 'package:social_network/generated/codegen_loader.g.dart';
+import 'package:social_network/preference/home_pref.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -13,7 +17,6 @@ class _MyHomePageState extends State<MyHomePage> {
   int _counter1 = 5;
   int _counter2 = 1;
 
-
   void _incrementCounter1() {
     setState(() {
       _counter1++;
@@ -25,6 +28,9 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter2++;
     });
   }
+
+
+
 
   @override
   Widget build(BuildContext context) {
@@ -74,7 +80,7 @@ class _MyHomePageState extends State<MyHomePage> {
                       mainAxisAlignment: MainAxisAlignment.end,
                       children: [
                         Text(
-                          'Дима Ананьев',
+                          '#Name',
                           style: TextStyle(
                             fontSize: 18,
                             fontWeight: FontWeight.w600,
@@ -92,7 +98,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   size: 16.0,
                                 ),
                                 SizedBox(width: 10,),
-                                Text("Владивосток",
+                                Text("#City",
                                   style: TextStyle(fontSize: 14,
                                     fontWeight: FontWeight.w300,
                                     color: Colors.white,
@@ -109,7 +115,7 @@ class _MyHomePageState extends State<MyHomePage> {
                                   size: 16.0,
                                 ),
                                 SizedBox(width: 10,),
-                                Text("22.06.1999",
+                                Text("#DateBD",
                                   style: TextStyle(fontSize: 14,
                                     fontWeight: FontWeight.w300,
                                     color: Colors.white,
@@ -126,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               const SizedBox(height: 50,),
-              const Text('Публикации',
+              const Text(LocaleKeys.publication.tr(),
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
@@ -147,7 +153,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Первая публикация',
+                    const Text('#Title_publication',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
@@ -156,8 +162,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     const SizedBox(height: 10,),
                     const Text(
-                      'Flutter transforms the development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded experiences from a single codebase.',
-                      style: TextStyle(
+                      '#Text_publicatio',
+                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
@@ -165,7 +171,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     const SizedBox(height: 10,),
                     const Text(
-                      'Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.',
+                      '#Text_publicatio',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w400,
@@ -185,7 +191,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         const SizedBox(width: 5,),
                         Text(
-                          '$_counter1',
+                          '#Count_like',
                           style: const TextStyle(
                             color: Colors.white,
                           ),
@@ -209,7 +215,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 child: Column(
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
-                    const Text('Врорая публикация',
+                    const Text('#Title_publicatio',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w500,
@@ -218,7 +224,7 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     const SizedBox(height: 10,),
                     const Text(
-                      'Flutter transforms the development process. Build, test, and deploy beautiful mobile, web, desktop, and embedded experiences from a single codebase.',
+                      '#Text_publicatio',
                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w400,
@@ -227,8 +233,8 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                     const SizedBox(height: 10,),
                     const Text(
-                      'Flutter is an open source framework by Google for building beautiful, natively compiled, multi-platform applications from a single codebase.',
-                      style: TextStyle(
+                      '#Text_publicatio',
+                       style: TextStyle(
                         color: Colors.white,
                         fontWeight: FontWeight.w400,
                         fontSize: 14,
@@ -247,7 +253,7 @@ class _MyHomePageState extends State<MyHomePage> {
                         ),
                         const SizedBox(width: 5,),
                         Text(
-                          '$_counter2',
+                          '#Count_like',
                           style: const TextStyle(
                             color: Colors.white,
                           ),
