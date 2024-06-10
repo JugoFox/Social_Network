@@ -5,6 +5,8 @@ import 'package:social_network/generated/codegen_loader.g.dart';
 import 'package:social_network/pages/setting_screem.dart';
 import 'package:social_network/preference/home_pref.dart';
 
+import '../generated/locale_keys.g.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -40,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
             .colorScheme
             .inversePrimary,
         title: Center(
-            child: Text(widget.title, textAlign: TextAlign.center)),
+            child: Text(LocaleKeys.title.tr(), textAlign: TextAlign.center)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -130,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               const SizedBox(height: 50,),
-              const Text('Публикации',
+              Text(LocaleKeys.publication.tr(),
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
@@ -268,7 +270,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   const SizedBox(height: 15,),
                   ElevatedButton(
                     child: Text(
-                        'Настройки',
+                        LocaleKeys.setting.tr(),
                       style: const TextStyle(
                       color: Colors.white,
                     ),

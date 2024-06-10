@@ -5,6 +5,8 @@ import 'package:social_network/generated/codegen_loader.g.dart';
 import 'package:social_network/pages/home.dart';
 import 'package:social_network/preference/home_pref.dart';
 
+import '../generated/locale_keys.g.dart';
+
 class SettingScreen extends StatelessWidget {
   const SettingScreen({Key? key}) : super(key : key);
 
@@ -13,7 +15,8 @@ class SettingScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         centerTitle: true,
-        title: const Text("Настройки"),
+        title:  Center(
+            child: Text(LocaleKeys.setting.tr(), textAlign: TextAlign.center)),
       ),
       body: Center(
         child: Column(
@@ -32,7 +35,7 @@ class SettingScreen extends StatelessWidget {
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
-                  const Text('Пункт настроек № 1',
+                   Text(LocaleKeys.set1.tr(),
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
@@ -40,8 +43,8 @@ class SettingScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10,),
-                  const Text(
-                    "Пункт настроек № 2",
+                   Text(
+                      LocaleKeys.set2.tr(),
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
@@ -49,8 +52,8 @@ class SettingScreen extends StatelessWidget {
                     ),
                   ),
                   const SizedBox(height: 10,),
-                  const Text(
-                    "Пункт настроек № 3",
+                   Text(
+                      LocaleKeys.set3.tr(),
                     style: TextStyle(
                       color: Colors.black,
                       fontWeight: FontWeight.w500,
@@ -60,13 +63,10 @@ class SettingScreen extends StatelessWidget {
                 ],
               ),
             ),
-
-
-
             const SizedBox(height: 15,),
             ElevatedButton(
               child: Text(
-                'Назад',
+                LocaleKeys.back.tr(),
                 style: const TextStyle(
                   color: Colors.white,
                 ),
