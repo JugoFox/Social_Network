@@ -1,13 +1,13 @@
 import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:social_network/generated/codegen_loader.g.dart';
-import 'package:social_network/preference/home_pref.dart';
+import '../generated/locale_keys.g.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
   final String title;
+
+
 
   @override
   State<MyHomePage> createState() => _MyHomePageState();
@@ -42,7 +42,7 @@ class _MyHomePageState extends State<MyHomePage> {
             .colorScheme
             .inversePrimary,
         title: Center(
-            child: Text(widget.title, textAlign: TextAlign.center)),
+            child: Text(LocaleKeys.title.tr(), textAlign: TextAlign.center)),
       ),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
@@ -132,7 +132,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               const SizedBox(height: 50,),
-              const Text(LocaleKeys.publication.tr(),
+              Text(LocaleKeys.publication.tr(),
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
