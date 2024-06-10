@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:easy_localization/easy_localization.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:social_network/generated/codegen_loader.g.dart';
+import 'package:social_network/pages/setting_screem.dart';
 import 'package:social_network/preference/home_pref.dart';
 
 class MyHomePage extends StatefulWidget {
@@ -28,9 +29,6 @@ class _MyHomePageState extends State<MyHomePage> {
       _counter2++;
     });
   }
-
-
-
 
   @override
   Widget build(BuildContext context) {
@@ -132,7 +130,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
               const SizedBox(height: 50,),
-              const Text(LocaleKeys.publication.tr(),
+              const Text('Публикации',
                 style: TextStyle(
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
@@ -262,6 +260,27 @@ class _MyHomePageState extends State<MyHomePage> {
                     ),
                   ],
                 ),
+              ),
+              Column(
+                crossAxisAlignment: CrossAxisAlignment.end,
+                mainAxisAlignment: MainAxisAlignment.end,
+                children: [
+                  const SizedBox(height: 15,),
+                  ElevatedButton(
+                    child: Text(
+                        'Настройки',
+                      style: const TextStyle(
+                      color: Colors.white,
+                    ),
+                  ),
+                    onPressed: () {
+                      Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingScreen()),);
+                    },
+                    style: ElevatedButton.styleFrom(
+                        backgroundColor: Colors.blueGrey,
+                    ),
+                  ),
+                ],
               ),
             ],
           ),

@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
       ),
 
-      home:  const MyHomePage( title: LocaleKeys.title.tr()),
+      home:  const MyHomePage( title: "Социальная сеть"),
     );
   }
 }
